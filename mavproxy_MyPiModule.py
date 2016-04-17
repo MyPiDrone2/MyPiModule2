@@ -1,12 +1,12 @@
-''' --------------------------------------------------------------------------- '''
-''' MyPiModule for MyPIDrone                                                    '''
-''' www.MyPiDrone.com MyPiDrone kev&phil Project                                '''
-''' https://github.com/MyPiDrone/MyPiModule2                                     '''
-''' --------------------------------------------------------------------------- '''
-''' Version 1.5 : Apr 17 2016                                                   '''
-''' --------------------------------------------------------------------------- '''
-''' README here: https://github.com/MyPiDrone/MyPiModule2/blob/master/README.md '''
-''' --------------------------------------------------------------------------- '''
+''' ----------------------------------------------------------------------------------- '''
+''' MyPiDrone2 Project Kev&Phil : Copter QUAD with Raspberry PI3 & Navio2 controler     '''
+''' www.MyPiDrone.com MyPiDrone kev&phil Project                                        '''
+''' https://github.com/MyPiDrone2/MyPiModule2                                           '''
+''' ----------------------------------------------------------------------------------- '''
+''' Version 1.5 : Apr 17 2016                                                           '''
+''' ----------------------------------------------------------------------------------- '''
+''' README here: https://github.com/MyPiDrone2/MyPiModule2/blob/master/README.md        '''
+''' ----------------------------------------------------------------------------------- '''
 
 import time
 from pymavlink import mavutil
