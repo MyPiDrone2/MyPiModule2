@@ -17,7 +17,7 @@ cp /etc/rc.local MyPiModule2/
 cd MyPiModule2
 VERSION=`grep "self.myversion" mavproxy_MyPiModule.py|head -n 1|awk -F'"' '{print "v"$2}'`
 echo "mavproxy_MyPiModule.py VERSION=$VERSION"
-LIST="build.sh mavproxy_MyPiModule.py StartArduCopter-quad.sh start_tx_with_video_recording.sh start_tx_with_video_recording_broadcast_over_ap.sh start_rx.sh start_ap.sh rc.local README.md"
+LIST="mav.parm build.sh mavproxy_MyPiModule.py StartArduCopter-quad.sh start_tx_with_video_recording.sh start_tx_with_video_recording_broadcast_over_ap.sh start_rx.sh start_ap.sh rc.local README.md"
 git add $LIST
 git commit $LIST -m "$VERSION $date"
 #git commit StartArduCopter-quad.sh -m "$date"
