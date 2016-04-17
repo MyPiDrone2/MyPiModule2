@@ -47,7 +47,7 @@ fi
 #### 2.4Ghz
 CHANNEL="13"
 #### 2.3Ghz
-CHANNEL="-13"
+###CHANNEL="-13"
 
 OPTION="null"
 if [ "_$OPT1" = "_" ];then 
