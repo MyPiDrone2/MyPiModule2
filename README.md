@@ -1,7 +1,7 @@
 
 ########################################################################################################
 
-MyPiDrone2 Project Kev&Phil : Copter QUAD with Raspberry PI3 & Navio2 controler
+MyPiDrone2 Project Kev&Phil : Copter QUAD with Raspberry PI3 & NAVIO2 controler
 
 MyPiModule :  MAVProxy MyPiModule for MyPiDrone2 http://www.MyPiDrone.com
 
