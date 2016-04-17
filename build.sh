@@ -3,7 +3,7 @@
 #### www.MyPiDrone.com
 #########################################################
 date=`date`
-MYDIR="/home/kevin/MAVProxy-1.4.40"
+MYDIR="/root/MAVProxy-1.4.43"
 cd $MYDIR
 #git clone  https://github.com/MyPiDrone2/MyPiModule2
 vi MAVProxy/modules/mavproxy_MyPiModule.py
@@ -39,7 +39,8 @@ if [ $C -ne 0 ]; then
 fi
 echo "/usr/bin/python /usr/local/bin/mavproxy.py --master=udp:127.0.0.1:14550 --quadcopter --out=/dev/ttyUSB0,57600  --default-modules='MyPiModule' --show-errors"
 ### load only MyPiModule
-/usr/bin/python /usr/local/bin/mavproxy.py --master=udp:127.0.0.1:14550 --quadcopter --out=/dev/ttyUSB0,57600  --default-modules='MyPiModule,mode' --show-errors
+####/usr/bin/python /usr/local/bin/mavproxy.py --master=udp:127.0.0.1:14550 --quadcopter --out=/dev/ttyUSB0,57600  --default-modules='MyPiModule,mode' --show-errors
+/usr/bin/python /usr/local/bin/mavproxy.py --master=udp:127.0.0.1:14550 --quadcopter --out=192.168.1.15:14550 --show-errors
 ### load all modules
 #/usr/bin/python /usr/local/bin/mavproxy.py --master=udp:127.0.0.1:14550 --quadcopter --out=/dev/ttyUSB0,57600  --show-errors
 
