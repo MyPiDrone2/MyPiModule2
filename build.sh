@@ -5,16 +5,16 @@
 date=`date`
 MYDIR="/home/kevin/MAVProxy-1.4.40"
 cd $MYDIR
-#git clone  https://github.com/MyPiDrone/MyPiModule
+#git clone  https://github.com/MyPiDrone2/MyPiModule2
 vi MAVProxy/modules/mavproxy_MyPiModule.py
 python setup.py build install
 [ $? -ne 0 ] && exit 1
-cp MAVProxy/modules/mavproxy_MyPiModule.py MyPiModule/
-cp /usr/local/bin/StartArduCopter-quad.sh MyPiModule/
-cp /home/kevin/fpv/TESTS/start_tx_with_video_recording_broadcast_over_ap.sh MyPiModule/
-cp /home/kevin/fpv/start_tx_with_video_recording.sh MyPiModule/
-cp /etc/rc.local MyPiModule/
-cd MyPiModule
+cp MAVProxy/modules/mavproxy_MyPiModule.py MyPiModule2/
+cp /usr/local/bin/StartArduCopter-quad.sh MyPiModule2/
+cp /home/kevin/fpv/TESTS/start_tx_with_video_recording_broadcast_over_ap.sh MyPiModule2/
+cp /home/kevin/fpv/start_tx_with_video_recording.sh MyPiModule2/
+cp /etc/rc.local MyPiModule2/
+cd MyPiModule2
 VERSION=`grep "self.myversion" mavproxy_MyPiModule.py|head -n 1|awk -F'"' '{print "v"$2}'`
 echo "mavproxy_MyPiModule.py VERSION=$VERSION"
 LIST="build.sh mavproxy_MyPiModule.py StartArduCopter-quad.sh start_tx_with_video_recording.sh start_tx_with_video_recording_broadcast_over_ap.sh start_rx.sh start_ap.sh rc.local README.md"

@@ -1,11 +1,11 @@
 ''' --------------------------------------------------------------------------- '''
 ''' MyPiModule for MyPIDrone                                                    '''
 ''' www.MyPiDrone.com MyPiDrone kev&phil Project                                '''
-''' https://github.com/MyPiDrone/MyPiModule                                     '''
+''' https://github.com/MyPiDrone/MyPiModule2                                     '''
 ''' --------------------------------------------------------------------------- '''
 ''' Version 1.5 : Apr 17 2016                                                   '''
 ''' --------------------------------------------------------------------------- '''
-''' README here : https://github.com/MyPiDrone/MyPiModule/blob/master/README.md '''
+''' README here: https://github.com/MyPiDrone/MyPiModule2/blob/master/README.md '''
 ''' --------------------------------------------------------------------------- '''
 
 import time
