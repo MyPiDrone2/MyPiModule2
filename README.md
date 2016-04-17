@@ -3,9 +3,9 @@
 
 MyPiDrone Project Kev&Phil : Copter QUAD with Raspberry PI2 & Navio+ controler
 
-MyPiModule :  MAVProxy MyPiModule for MyPiDrone http://www.MyPiDrone.com
+MyPiModule :  MAVProxy MyPiModule for MyPiDrone2 http://www.MyPiDrone.com
 
-https://github.com/MyPiDrone/MyPiModule/blob/master/mavproxy_MyPiModule.py
+https://github.com/MyPiDrone2/MyPiModule2/blob/master/mavproxy_MyPiModule.py
 
 ########################################################################################################
 
@@ -89,7 +89,7 @@ The main functions of MyPiModule (MAVProxy module):
 
     -1- Install MAVproxy with git clone https://github.com/Dronecode/MAVProxy.git
     
-    -2- Create your MAVProxy Module/modules/mavproxy_MyPiModule.py module available here: git clone https://github.com/MyPiDrone/MyPiModule
+    -2- Create your MAVProxy Module/modules/mavproxy_MyPiModule.py module available here: git clone https://github.com/MyPiDrone2/MyPiModule2
     
     -3- Execute python setup.py build install
     
