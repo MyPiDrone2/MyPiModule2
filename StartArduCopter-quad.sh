@@ -147,7 +147,7 @@ if [ $C -ne 0 ]; then
 	echo "killall tx RC=$?" >> /var/log/ArduCopter-quad.log
 	sleep 1
 fi
-cd /home/kevin/fpv
+cd /root/fpv
 if [ "$OPTION" = "VB" ];then 
 	date > /var/log/start_tx.log
 	MSG="$CMD_START_VIDEO $WLAN $CHANNEL is started"

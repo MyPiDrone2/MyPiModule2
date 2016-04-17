@@ -36,7 +36,7 @@ TIMEOUT=1200000
 # 40 minutes
 #TIMEOUT=2400000
 
-VIDDIR="/home/kevin/fpv/videos"
+VIDDIR="/root/fpv/videos"
 
 if [ "$1" = "-h" -o "$1" = "--help" ]; then
 	WLAN=""
