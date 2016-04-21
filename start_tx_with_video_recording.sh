@@ -47,7 +47,8 @@ else
         WLAN=$1
 fi
 if [ "_$2" = "_" ]; then
-        CHANNEL="-13"
+        #CHANNEL="-13"
+        CHANNEL="13"
 else
         CHANNEL=$2
 fi

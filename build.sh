@@ -3,7 +3,7 @@
 #### www.MyPiDrone.com
 #########################################################
 date=`date`
-MYDIR="/root/MAVProxy-1.4.43"
+MYDIR="/root/MyPiDrone2/MAVProxy-1.4.43"
 cd $MYDIR
 #git clone  https://github.com/MyPiDrone2/MyPiModule2
 vi MAVProxy/modules/mavproxy_MyPiModule.py
