@@ -1,0 +1,11 @@
+[Unit]
+Description=myvideo
+After=ArduCopter-quad.service mavproxy.service
+
+[Service]
+ExecStart=/root/fpv/start_tx_with_video_recording.sh wlan1 13 --vbr
+KillMode=process
+#Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

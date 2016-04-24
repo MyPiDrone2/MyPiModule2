@@ -1,0 +1,11 @@
+[Unit]
+Description=ArduCopter-quad
+After=rsyslog.service
+
+[Service]
+ExecStart=/usr/bin/ArduCopter-quad -A /dev/ttyAMA0 -C udp:127.0.0.1:14550
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
