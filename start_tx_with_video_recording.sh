@@ -120,7 +120,7 @@ then
         	echo Starting HD Video conversion h264 to mp4 : avconv -stats -y -r $FPS -i $VIDEO -vcodec copy $VIDEO.mp4 ...
 		avconv -stats -y -r $FPS -i $VIDEO -vcodec copy $VIDEO.mp4
         	echo Starting HD Video re-transmission for $VIDEO...
-		cat $VIDEO | ./tx -p $PORT -b $BLOCK_SIZE -r $FECS -f $PACKET_LENGTH $WLAN 1>/dev/null 2>&1
+		cat $VIDEO | /root/wifibroadcast/tx -p $PORT -b $BLOCK_SIZE -r $FECS -f $PACKET_LENGTH $WLAN 1>/dev/null 2>&1
 	else
         	echo Starting HD Video transmission and recording...
 		VIDEO="$VIDDIR/Video-Tarot-h264-`date +%Y%h%d-%H%M`"
@@ -141,10 +141,10 @@ then
 		elif [ "$OPTION" = "--vbr" ]; then
 			ln -sf $VIDEO $VIDDIR/Video-Tarot-h264
 			echo "Recording and broadcasting  $VIDEO in progress : hit CTRL C to stop"
-			raspivid -ih -t $TIMEOUT -w $WIDTH -h $HEIGHT -fps $FPS -b $BITRATE -n -g $KEYFRAMERATE -pf high -o - | tee $VIDEO | ./tx -p $PORT -b $BLOCK_SIZE -r $FECS -f $PACKET_LENGTH $WLAN 1>/dev/null 2>&1
+			raspivid -ih -t $TIMEOUT -w $WIDTH -h $HEIGHT -fps $FPS -b $BITRATE -n -g $KEYFRAMERATE -pf high -o - | tee $VIDEO | /root/wifibroadcast/tx -p $PORT -b $BLOCK_SIZE -r $FECS -f $PACKET_LENGTH $WLAN 1>/dev/null 2>&1
 		else
 			echo "Broadcasting video (no recording) in progress : hit CTRL C to stop"
-			raspivid -ih -t $TIMEOUT -w $WIDTH -h $HEIGHT -fps $FPS -b $BITRATE -n -g $KEYFRAMERATE -pf high -o - | ./tx -p $PORT -b $BLOCK_SIZE -r $FECS -f $PACKET_LENGTH $WLAN 1>/dev/null 2>&1
+			raspivid -ih -t $TIMEOUT -w $WIDTH -h $HEIGHT -fps $FPS -b $BITRATE -n -g $KEYFRAMERATE -pf high -o - | /root/wifibroadcast/tx -p $PORT -b $BLOCK_SIZE -r $FECS -f $PACKET_LENGTH $WLAN 1>/dev/null 2>&1
 		fi
 	fi
 else
