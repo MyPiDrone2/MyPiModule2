@@ -21,6 +21,7 @@ HEIGHT=720
 FPS=15
 #BITRATE=2000000
 BITRATE=4000000
+BITRATE=2000000
 KEYFRAMERATE=60
 BLOCK_SIZE=8
 FECS=4
@@ -47,8 +48,8 @@ else
         WLAN=$1
 fi
 if [ "_$2" = "_" ]; then
-        #CHANNEL="-13"
-        CHANNEL="13"
+        CHANNEL="-13"
+        #CHANNEL="13"
 else
         CHANNEL=$2
 fi
@@ -144,7 +145,7 @@ then
 			raspivid -ih -t $TIMEOUT -w $WIDTH -h $HEIGHT -fps $FPS -b $BITRATE -n -g $KEYFRAMERATE -pf high -o - | tee $VIDEO | /root/wifibroadcast/tx -p $PORT -b $BLOCK_SIZE -r $FECS -f $PACKET_LENGTH $WLAN 1>/dev/null 2>&1
 		else
 			echo "Broadcasting video (no recording) in progress : hit CTRL C to stop"
-			raspivid -ih -t $TIMEOUT -w $WIDTH -h $HEIGHT -fps $FPS -b $BITRATE -n -g $KEYFRAMERATE -pf high -o - | /root/wifibroadcast/tx -p $PORT -b $BLOCK_SIZE -r $FECS -f $PACKET_LENGTH $WLAN 1>/dev/null 2>&1
+			raspivid -ih -t $TIMEOUT -w $WIDTH -h $HEIGHT -fps $FPS -b $BITRATE -n -g $KEYFRAMERATE -pf high -o - | /root/wifibroadcast/tx -p $PORT -b $BLOCK_SIZE -r $FECS -f $PACKET_LENGTH $WLAN 
 		fi
 	fi
 else
