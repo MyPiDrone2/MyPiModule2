@@ -4,7 +4,8 @@
 #########################################################
 date=`date`
 MYDIR="/root/MyPiDrone2/MAVProxy-1.4.43"
-MAVPROXY="${MYDIR}/MAVProxy/mavproxy.py"
+#MAVPROXY="${MYDIR}/MAVProxy/mavproxy.py"
+MAVPROXY="/usr/local/bin/mavproxy.py"
 cd $MYDIR
 #git clone  https://github.com/MyPiDrone2/MyPiModule2
 vi MAVProxy/modules/mavproxy_MyPiModule.py
