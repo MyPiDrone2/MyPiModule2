@@ -11,6 +11,8 @@ vi MAVProxy/modules/mavproxy_MyPiModule.py
 python setup.py build install
 [ $? -ne 0 ] && exit 1
 cp MAVProxy/modules/mavproxy_MyPiModule.py MyPiModule2/
+cp /usr/local/bin/start_MAVProxy_MyPiModule.sh MyPiModule2/
+cp /usr/local/bin/start_ArduCopter-quad.sh MyPiModule2/
 cp /usr/local/bin/StartArduCopter-quad.sh MyPiModule2/
 cp /lib/systemd/system/ArduCopter-quad.service MyPiModule2/
 cp /lib/systemd/system/myvideo.service MyPiModule2/
@@ -22,7 +24,7 @@ cp /etc/rc.local MyPiModule2/
 cd MyPiModule2
 VERSION=`grep "self.myversion" mavproxy_MyPiModule.py|head -n 1|awk -F'"' '{print "v"$2}'`
 echo "mavproxy_MyPiModule.py VERSION=$VERSION"
-LIST="mav.parm build.sh mavproxy_MyPiModule.py StartArduCopter-quad.sh start_tx_with_video_recording.sh start_tx_with_video_recording_broadcast_over_ap.sh start_rx.sh start_ap.sh start_video.sh rc.local ArduCopter-quad.service myvideo.service mavproxy.service README.md"
+LIST="mav.parm build.sh mavproxy_MyPiModule.py StartArduCopter-quad.sh start_tx_with_video_recording.sh start_tx_with_video_recording_broadcast_over_ap.sh start_rx.sh start_ap.sh start_video.sh rc.local ArduCopter-quad.service myvideo.service mavproxy.service start_MAVProxy_MyPiModule.sh start_ArduCopter-quad.sh README.md"
 git add $LIST
 git commit $LIST -m "$VERSION $date"
 #git commit StartArduCopter-quad.sh -m "$date"
