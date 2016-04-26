@@ -97,7 +97,7 @@ fi
 
 ###################################
 CMD1="/usr/bin/ArduCopter-quad -A /dev/ttyAMA0 -C udp:127.0.0.1:14550"
-CMD2="/usr/local/bin/mavproxy.py --master=udp:127.0.0.1:14550 --quadcopter --out=/dev/ttyUSB0,57600 --daemon --show-errors --default-modules='MyPiModule'"
+CMD2="/usr/local/bin/mavproxy.py --master=udp:127.0.0.1:14550 --quadcopter --out=/dev/ttyUSB0,57600 --daemon --show-errors --default-modules='MyPiModule,mode'"
 ###################################
 
 C1=`ps -ef|grep "ArduCopter-quad"|grep -ci "ttyUSB0"`

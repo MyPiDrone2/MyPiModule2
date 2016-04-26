@@ -3,7 +3,7 @@ Description=mavproxy
 After=ArduCopter-quad.service
 
 [Service]
-ExecStart=/usr/local/bin/mavproxy.py --master=udp:127.0.0.1:14550 --quadcopter --out=/dev/ttyUSB0,57600 --daemon --show-errors --default-modules='MyPiModule,mode'
+ExecStart=/usr/bin/python mavproxy.py --master=udp:127.0.0.1:14550 --quadcopter --out=/dev/ttyUSB0,57600 --daemon --show-errors --default-modules='MyPiModule,mode'
 KillMode=process
 Restart=on-failure
 
