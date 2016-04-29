@@ -348,8 +348,7 @@ class MyPiModule(mp_module.MPModule):
                    msg = "MyRC%sraw %s MyVideo on %s : UP" % (self.settings.myrcvideo,self.myrcraw[self.settings.myrcvideo],self.video_on)
                    self.my_write_log("INFO",msg)
                    self.my_statustext_send("Video off")
-                   self.my_subprocess(["killall","raspivid"])
-                   self.my_subprocess(["killall","tx"])
+                   self.my_subprocess(["/usr/local/bin/stop_video.sh"])
            ''' MANAGE VIDEO ON : RC6 DOWN '''
            if self.myrcraw[self.settings.myrcvideo] > 0 and self.myrcraw[self.settings.myrcvideo] < self.RC_low_mark[self.settings.myrcvideo]:
                if self.video_on == False:
