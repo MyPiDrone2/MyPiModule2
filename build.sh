@@ -29,7 +29,7 @@ cp /usr/local/bin/show_modules.sh                                    MyPiModule2
 cd MyPiModule2
 VERSION=`grep "self.myversion" mavproxy_MyPiModule.py|head -n 1|awk -F'"' '{print "v"$2}'`
 echo "mavproxy_MyPiModule.py VERSION=$VERSION"
-LIST="mav.parm build.sh mavproxy_MyPiModule.py rc.local ArduCopter-quad.service myvideo.service mavproxy.service README.md start_MAVProxy_MyPiModule.sh start_ArduCopter-quad.sh start_tx_with_video_recording.sh start_video.sh stop_video.sh start_tx_with_video_recording_broadcast_over_ap.sh show_modules.sh"
+LIST="mav.parm build.sh mavproxy_MyPiModule.py rc.local ArduCopter-quad.service myvideo.service mavproxy.service README.md start_MAVProxy_MyPiModule.sh start_ArduCopter-quad.sh start_tx_with_video_recording.sh start_video.sh stop_video.sh start_tx_with_video_recording_broadcast_over_ap.sh show_modules.sh start_rx.sh start_ap.sh"
 git add $LIST
 git commit $LIST -m "$VERSION $date"
 #git commit StartArduCopter-quad.sh -m "$date"
