@@ -35,12 +35,7 @@ git commit $LIST -m "$VERSION $date"
 git pull
 git push
 cd $MYDIR
-C=`ps -ef |grep -v grep |grep -c /usr/local/bin/mavproxy.py`
-if [ $C -ne 0 ]; then
-        echo "kill /usr/local/bin/mavproxy.py"
-        ps -ef |grep -v grep |grep /usr/local/bin/mavproxy.py
-        ps -ef |grep -v grep |grep /usr/local/bin/mavproxy.py|awk '{print $2}'|xargs kill
-fi
+systemctl stop mavproxy
 echo "/usr/bin/python $MAVPROXY --master=udp:127.0.0.1:14550 --quadcopter --out=/dev/ttyUSB0,57600  --default-modules='MyPiModule,mode' --show-errors"
 ### load only MyPiModule
 /usr/bin/python $MAVPROXY --master=udp:127.0.0.1:14550 --quadcopter --out=/dev/ttyUSB0,57600  --default-modules='MyPiModule,mode' --show-errors
