@@ -32,14 +32,6 @@ echo "mavproxy_MyPiModule.py VERSION=$VERSION"
 LIST="mav.parm build.sh mavproxy_MyPiModule.py rc.local ArduCopter-quad.service myvideo.service mavproxy.service README.md start_MAVProxy_MyPiModule.sh start_ArduCopter-quad.sh start_tx_with_video_recording.sh start_video.sh stop_video.sh start_tx_with_video_recording_broadcast_over_ap.sh show_modules.sh start_rx.sh start_ap.sh"
 git add $LIST
 git commit $LIST -m "$VERSION $date"
-#git commit StartArduCopter-quad.sh -m "$date"
-#git commit start_tx_with_video_recording.sh -m "$date"
-#git commit start_tx_with_video_recording_broadcast_over_ap.sh -m "$date"
-#git commit start_rx.sh -m "$date"
-#git commit start_ap.sh -m "$date"
-#git commit rc.local -m "$date"
-#git commit build.sh -m "$date"
-#git commit README.md -m "$date"
 git pull
 git push
 cd $MYDIR
