@@ -14,6 +14,7 @@
 #[Install]
 # WantedBy=multi-user.target
 #
-nohup /usr/local/bin/start_tx_with_video_recording.sh wlan1 -13 --vbr 1>/var/log/start_tx_with_video_recording.log 2>&1 &
+#nohup /usr/local/bin/start_tx_with_video_recording.sh wlan1 -13 --vbr 1>/var/log/start_tx_with_video_recording.log 2>&1 &
+nohup /usr/local/bin/start_tx_with_video_recording.sh wlan1 13 --vbr 1>/var/log/start_tx_with_video_recording.log 2>&1 &
 echo "Video is started"
 exit 0

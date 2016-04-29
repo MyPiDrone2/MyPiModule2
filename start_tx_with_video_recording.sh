@@ -10,7 +10,7 @@ env
 
 VIDDIR="/root/fpv/videos"
 WifiBroadcast_TX="/root/WifiBroadcast/wifibroadcast/tx"
-WifiBroadcast_TX="/root/wifibroadcast/tx"
+#WifiBroadcast_TX="/root/wifibroadcast/tx"
 
 DATE=`date`
 PREFIX="#---- $DATE"
@@ -29,7 +29,8 @@ echo "$PREFIX Start this script with root authority"
 #
 WIDTH=1280
 HEIGHT=720
-FPS=15
+#FPS=15
+FPS=60
 BITRATE=2000000
 BITRATE=4000000
 #BITRATE=2000000
