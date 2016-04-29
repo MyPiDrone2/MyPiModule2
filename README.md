@@ -21,11 +21,16 @@ https://github.com/MyPiDrone2/MyPiModule2/blob/master/mavproxy_MyPiModule.py
 - build.sh                                            : to install MyPiModule
 - mavproxy_MyPiModule.py                              : module MAVProxy
 - rc.local                                            : exec StartArduCopter-quad.sh
-- StartArduCopter-quad.sh                             : manage ArduCopter-quad and Video Wifibroadcast
+- ArduCopter-quad.service                             : systemd call /usr/local/bin/start_ArduCopter-quad.sh
+- myvideo.service                                     : systemd call /usr/local/bin/start_video.sh /usr/local/bin/stop_video.sh
+- mavproxy.service                                    : systemd call /usr/local/bin/start_MAVProxy_MyPiModule.sh
+- start_video.sh                                      : fork /usr/local/bin/start_tx_with_video_recording.sh
+- stop_video.sh                                       : kill raspivid and tx
 - start_tx_with_video_recording.sh                    : start Video Wifibroadcast
 - start_tx_with_video_recording_broadcast_over_ap.sh  : start Video Broadcast over Wifi AP : Beta test
 - start_ap.sh                                         : start Wifi AP on GCS
 - start_tx.sh                                         : view Video on GCS
+- show_modules.sh                                     : tools show params modules
 ########################################################################################################
 
 
